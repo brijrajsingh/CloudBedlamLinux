@@ -27,6 +27,6 @@ iptables -A OUTPUT -t mangle -p tcp --sport $port -j MARK --set-mark 5
 
 iptables-save
 
-sleep $duration
+sleep "$duration"
 # delete existing filter rules, etc...
 tc qdisc del root dev $interface
